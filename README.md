@@ -19,11 +19,6 @@ This example is taken from `molecule/default/converge.yml` and is tested on each
     swap_file_size_mb: '256'
     swap_test_mode: true
 
-  pre_tasks:
-    - name: Update apt cache.
-      apt: update_cache=true cache_valid_time=600
-      when: ansible_os_family == 'Debian'
-
   roles:
     - role: buluma.swap
 ```
