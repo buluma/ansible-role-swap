@@ -1,0 +1,8 @@
+---
+#
+# Ansible managed
+#
+exlude_list:
+  - ./molecule/default/collections.yml
+  - ./.tox
+  - ./.cache

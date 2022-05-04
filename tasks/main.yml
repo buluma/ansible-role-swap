@@ -1,0 +1,20 @@
+---
+
+- name: import assert.yml
+  ansible.builtin.import_tasks: assert.yml
+  run_once: yes
+  delegate_to: localhost
+
+- name: manage swap file entry in fstab.
+  ansible.posix.mount:
+    name: none
+    src: "{{ swap_file_path }}"
+    fstype: swap
+    opts: sw
+    state: "{{ swap_file_state }}"
+
+- include_tasks: disable.yml
+  when: swap_file_state == 'absent'
+
+- include_tasks: enable.yml
+  when: swap_file_state == 'present'

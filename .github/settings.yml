@@ -1,0 +1,8 @@
+---
+#
+# Ansible managed
+#
+repository:
+  description: Swap file and swap management for Linux.
+  homepage: https://buluma.github.io/
+  topics: system, server, swap, swapfile, pagefile, performance, memory, ram, ansible, molecule, tox, playbook, hacktoberfest

@@ -1,0 +1,21 @@
+---
+
+- name: test if swap_file_path is set correctly
+  ansible.builtin.assert:
+    that:
+      - swap_file_path is defined
+      - swap_file_path is string
+    quiet: yes
+
+- name: test if swap_file_state is set correctly
+  ansible.builtin.assert:
+    that:
+      - swap_file_state is defined
+      - swap_file_state is string
+    quiet: yes
+
+- name: test if swap_swappiness is set correctly
+  ansible.builtin.assert:
+    that:
+      - swap_swappiness is defined
+    quiet: yes
