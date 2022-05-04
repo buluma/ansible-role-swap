@@ -6,3 +6,6 @@ exlude_list:
   - ./molecule/default/collections.yml
   - ./.tox
   - ./.cache
+
+warn_list:
+  - no-handler  # TODO: Tasks that run when changed should likely be handlers.

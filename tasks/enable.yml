@@ -1,6 +1,6 @@
 ---
 - name: ensure swap file exists.
-  command: >
+  ansible.builtin.command: >
     {{ swap_file_create_command }}
     creates='{{ swap_file_path }}'
   register: swap_file_create
@@ -13,12 +13,12 @@
     mode: 0600
 
 - name: make swap file if necessary.
-  command: mkswap {{ swap_file_path }}
+  ansible.builtin.command: mkswap {{ swap_file_path }}
   when: swap_file_create is changed
   register: mkswap_result
 
 - name: run swapon on the swap file.
-  command: swapon {{ swap_file_path }}
+  ansible.builtin.command: swapon {{ swap_file_path }}
   when:
     - mkswap_result is changed
     - not swap_test_mode
@@ -30,7 +30,7 @@
     state: present
 
 - name: Set vfs_cache_pressure
-  sysctl:
+  ansible.posix.sysctl:
     name: vm.vfs_cache_pressure
     value: "{{ swap_vfs_cache_pressure }}"
     state: present

@@ -6,7 +6,7 @@
   delegate_to: localhost
 
 - name: update apt cache.
-  apt: update_cache=true cache_valid_time=600
+  ansible.builtin.apt: update_cache=true cache_valid_time=600
   when: ansible_os_family == 'Debian'
 
 - name: manage swap file entry in fstab.
