@@ -1,0 +1,10 @@
+---
+#
+# Ansible managed
+#
+argument_specs:
+  main:
+    short_description: Swap file and swap management for Linux.
+    description: >
+      Swap file and swap management for Linux.
+    author: Michael Buluma
