@@ -2,10 +2,15 @@
 #
 # Ansible managed
 #
-exlude_list:
+exclude_paths:
+  - ./meta/preferences.yml
+  - ./molecule/default/prepare.yml
+  - ./molecule/default/converge.yml
   - ./molecule/default/collections.yml
   - ./.tox
   - ./.cache
+  - ./.github
+  - ./requirements.yml
 
-warn_list:
+skip_list:
   - no-handler  # TODO: Tasks that run when changed should likely be handlers.

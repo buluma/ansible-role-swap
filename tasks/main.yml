@@ -1,15 +1,15 @@
 ---
 
-- name: import assert.yml
+- name: Import assert.yml
   ansible.builtin.import_tasks: assert.yml
   run_once: yes
   delegate_to: localhost
 
-- name: update apt cache.
+- name: Update apt cache.
   ansible.builtin.apt: update_cache=true cache_valid_time=600
   when: ansible_os_family == 'Debian'
 
-- name: manage swap file entry in fstab.
+- name: Manage swap file entry in fstab.
   ansible.posix.mount:
     name: none
     src: "{{ swap_file_path }}"
