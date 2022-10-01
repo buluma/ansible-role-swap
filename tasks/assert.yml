@@ -1,21 +1,29 @@
 ---
 
-- name: Test if swap_file_path is set correctly
-  ansible.builtin.assert:
-    that:
-      - swap_file_path is defined
-      - swap_file_path is string
-    quiet: yes
-
-- name: Test if swap_file_state is set correctly
-  ansible.builtin.assert:
-    that:
-      - swap_file_state is defined
-      - swap_file_state is string
-    quiet: yes
-
 - name: Test if swap_swappiness is set correctly
   ansible.builtin.assert:
     that:
       - swap_swappiness is defined
+      - swap_swappiness is number
+      - swap_swappiness >= 0
+      - swap_swappiness <= 100
     quiet: yes
+
+- name: Test if swap_files is set correctly
+  ansible.builtin.assert:
+    that:
+      - swap_files is iterable
+    quiet: yes
+  when:
+    - swap_files is defined
+
+- name: Test if swap_files item is set correctly
+  ansible.builtin.assert:
+    that:
+      - item.path is defined
+      - item.size is number
+      - item.size >= 0
+    quiet: yes
+  loop: "{{ swap_files }}"
+  loop_control:
+    label: "{{ item.path }}"
