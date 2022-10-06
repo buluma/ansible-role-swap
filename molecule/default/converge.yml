@@ -7,6 +7,9 @@
     swap_file_size_mb: '256'
     swap_test_mode: true
     swap_swappiness: 60
+    swap_files:
+        - path: /my.swap
+          size: 1024
 
   roles:
     - role: buluma.swap
