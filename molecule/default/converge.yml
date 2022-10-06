@@ -8,8 +8,8 @@
     swap_test_mode: true
     swap_swappiness: 60
     swap_files:
-        - path: /my.swap
-          size: 1024
+      - path: /my.swap
+        size: 1024
 
   roles:
     - role: buluma.swap
