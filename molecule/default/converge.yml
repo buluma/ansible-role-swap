@@ -6,6 +6,7 @@
   vars:
     swap_file_size_mb: '256'
     swap_test_mode: true
+    swap_swappiness: 60
 
   roles:
     - role: buluma.swap
