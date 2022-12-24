@@ -16,6 +16,12 @@ molecule:
     matrix:
       - image: "enterpriselinux"
         tag: "7"
+      - image: "ubuntu"
+        tag: "latest"
+      - image: "gitlab-runner"
+        tag: "ubuntu"
+      - image: "gitlab-runner"
+        tag: "debian"
 
 testing:
   stage: test
