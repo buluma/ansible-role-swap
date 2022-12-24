@@ -14,7 +14,13 @@ molecule:
   retry: 1
   parallel:
     matrix:
-      - image: "enterpriselinux"
+      - image: "centos"
+        tag: "centos8"
+      - image: "centos-systemd"
+        tag: "systemd"
+      - image: "centos-systemd"
+        tag: "latest"
+      - image: "centos-systemd"
         tag: "7"
       - image: "ubuntu"
         tag: "latest"
