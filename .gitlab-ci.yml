@@ -8,7 +8,7 @@ molecule:
   stage: build
   allow_failure: true
   script:
-    - molecule test
+    - molecule converge
   rules:
     - if: $CI_COMMIT_REF_NAME == "master"
   retry: 1
