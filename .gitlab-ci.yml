@@ -14,20 +14,8 @@ molecule:
   retry: 1
   parallel:
     matrix:
-      - image: "centos"
-        tag: "centos8"
-      - image: "centos-systemd"
-        tag: "systemd"
-      - image: "centos-systemd"
-        tag: "latest"
-      - image: "centos-systemd"
+      - image: "enterpriselinux"
         tag: "7"
-      - image: "ubuntu"
-        tag: "latest"
-      - image: "gitlab-runner"
-        tag: "ubuntu"
-      - image: "gitlab-runner"
-        tag: "debian"
 
 testing:
   stage: test
