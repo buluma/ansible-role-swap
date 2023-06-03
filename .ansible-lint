@@ -6,6 +6,7 @@ exclude_paths:
   - ./meta/preferences.yml
   - ./molecule/default/prepare.yml
   - ./molecule/default/converge.yml
+  - ./molecule/default/verify.yml
   - ./molecule/default/collections.yml
   - ./.tox
   - ./.cache
@@ -13,4 +14,7 @@ exclude_paths:
   - ./requirements.yml
 
 skip_list:
-  - no-handler  # TODO: Tasks that run when changed should likely be handlers.
+  - yaml[truthy]
+
+enable_list:
+  - name[prefix]
