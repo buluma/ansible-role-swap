@@ -1,16 +1,23 @@
 ---
 galaxy_info:
-  role_name: swap
   author: buluma
-  description: Swap file and swap management for Linux.
-  company: "ShadowNet"
+  role_name: swap
+  description: Configure swap files on your system.
   license: Apache-2.0
+  company: ShadowNet
   min_ansible_version: "2.12"
+
   platforms:
     - name: EL
       versions:
-        - all
+        - "8"
     - name: Debian
+      versions:
+        - all
+    - name: Fedora
+      versions:
+        - all
+    - name: opensuse
       versions:
         - all
     - name: Ubuntu
@@ -20,13 +27,6 @@ galaxy_info:
       versions:
         - all
   galaxy_tags:
-    - system
-    - server
     - swap
-    - swapfile
-    - pagefile
-    - performance
-    - memory
-    - ram
 
 dependencies: []

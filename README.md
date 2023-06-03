@@ -1,6 +1,6 @@
 # [swap](#swap)
 
-Swap file and swap management for Linux.
+Configure swap files on your system.
 
 |GitHub|GitLab|Quality|Downloads|Version|Issues|Pull Requests|
 |------|------|-------|---------|-------|------|-------------|
@@ -12,20 +12,16 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
 
 ```yaml
 ---
-- name: Converge
+- name: converge
   hosts: all
-  become: true
-
-  vars:
-    swap_file_size_mb: '256'
-    swap_test_mode: true
-    swap_swappiness: 60
-    swap_files:
-      - path: /my.swap
-        size: 1024
+  become: yes
+  gather_facts: yes
 
   roles:
     - role: buluma.swap
+      swap_files:
+        - path: /my.swap
+          size: 1024
 ```
 
 The machine needs to be prepared. In CI this is done using [`molecule/default/prepare.yml`](https://github.com/buluma/ansible-role-swap/blob/master/molecule/default/prepare.yml):
@@ -50,26 +46,18 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 
 ```yaml
 ---
+# defaults file for swap
 
-# The location of the swap file on the server.
-swap_file_path: /swapfile
+# Set the swappiness, 60 is default for Fedora 31.
+swap_swappiness: 60
 
-# How large (in mebibytes) to make the swap file.
-swap_file_size_mb: '512'
+# A list of swap files to add. The list must container **path** (an absolute path to a file) and **size** (an integer in megabytes).
+# swap_files:
+#   - path: /my.swap
+#     size: 1024
 
-# The vm.swappiness value to be configured in sysconfig.
-swap_swappiness: '60'
-
-# Controls the tendency of the kernel to reclaim the memory used for caching of VFS caches, versus pagecache and swap
-swap_vfs_cache_pressure: '50'
-
-# If you wish to remove your swapfile, and disable swap, set this to absent.
-swap_file_state: present
-
-# The command used to create the swap file.
-swap_file_create_command: "dd if=/dev/zero of={{ swap_file_path }} bs=1M count={{ swap_file_size_mb }}"
-
-swap_test_mode: false
+# You can disable swap if required.
+swap_enabled: yes
 ```
 
 ## [Requirements](#requirements)
@@ -99,8 +87,10 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 
 |container|tags|
 |---------|----|
-|[EL](https://hub.docker.com/repository/docker/buluma/enterpriselinux/general)|all|
+|[EL](https://hub.docker.com/repository/docker/buluma/enterpriselinux/general)|8|
 |[Debian](https://hub.docker.com/repository/docker/buluma/debian/general)|all|
+|[Fedora](https://hub.docker.com/repository/docker/buluma/fedora/general)|all|
+|[opensuse](https://hub.docker.com/repository/docker/buluma/opensuse/general)|all|
 |[Ubuntu](https://hub.docker.com/repository/docker/buluma/ubuntu/general)|all|
 |[Kali](https://hub.docker.com/repository/docker/buluma/kali/general)|all|
 

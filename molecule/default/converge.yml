@@ -1,15 +1,11 @@
 ---
-- name: Converge
+- name: converge
   hosts: all
-  become: true
-
-  vars:
-    swap_file_size_mb: '256'
-    swap_test_mode: true
-    swap_swappiness: 60
-    swap_files:
-      - path: /my.swap
-        size: 1024
+  become: yes
+  gather_facts: yes
 
   roles:
-    - role: buluma.swap
+    - role: ansible-role-swap
+      swap_files:
+        - path: /my.swap
+          size: 1024

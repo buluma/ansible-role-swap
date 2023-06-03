@@ -3,6 +3,6 @@
 # Ansible managed
 #
 repository:
-  description: Swap file and swap management for Linux.
+  description: Configure swap files on your system.
   homepage: https://buluma.github.io/
-  topics: system, server, swap, swapfile, pagefile, performance, memory, ram, ansible, molecule, tox, playbook
+  topics: swap, ansible, molecule, tox, playbook
