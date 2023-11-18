@@ -1,4 +1,4 @@
-# [swap](#swap)
+# [Ansible role swap](#swap)
 
 Configure swap files on your system.
 
