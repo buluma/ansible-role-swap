@@ -1,12 +1,24 @@
 # Changelog
 
-## [2.0.2](https://github.com/buluma/ansible-role-swap/tree/2.0.2) (2022-05-09)
+## [Unreleased](https://github.com/buluma/ansible-role-swap/tree/HEAD)
 
-[Full Changelog](https://github.com/buluma/ansible-role-swap/compare/2.0.1...2.0.2)
+[Full Changelog](https://github.com/buluma/ansible-role-swap/compare/2.0.3...HEAD)
+
+**Closed issues:**
+
+- Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#9](https://github.com/buluma/ansible-role-swap/issues/9)
+
+## [2.0.3](https://github.com/buluma/ansible-role-swap/tree/2.0.3) (2023-12-25)
+
+[Full Changelog](https://github.com/buluma/ansible-role-swap/compare/2.0.1...2.0.3)
 
 ## [2.0.1](https://github.com/buluma/ansible-role-swap/tree/2.0.1) (2022-05-09)
 
-[Full Changelog](https://github.com/buluma/ansible-role-swap/compare/2.0.0...2.0.1)
+[Full Changelog](https://github.com/buluma/ansible-role-swap/compare/2.0.2...2.0.1)
+
+## [2.0.2](https://github.com/buluma/ansible-role-swap/tree/2.0.2) (2022-05-09)
+
+[Full Changelog](https://github.com/buluma/ansible-role-swap/compare/2.0.0...2.0.2)
 
 **Closed issues:**
 
