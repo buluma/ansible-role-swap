@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-swap/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-swap/compare/2.1.0...HEAD)
+
+**Merged pull requests:**
+
+- Bump release-drafter/release-drafter from 5 to 6 [\#11](https://github.com/buluma/ansible-role-swap/pull/11) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [2.1.0](https://github.com/buluma/ansible-role-swap/tree/2.1.0) (2024-01-20)
 
 [Full Changelog](https://github.com/buluma/ansible-role-swap/compare/2.0.3...2.1.0)
