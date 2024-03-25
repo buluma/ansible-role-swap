@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- Bump dependabot/fetch-metadata from 1 to 2 [\#15](https://github.com/buluma/ansible-role-swap/pull/15) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump release-drafter/release-drafter from 5 to 6 [\#14](https://github.com/buluma/ansible-role-swap/pull/14) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump release-drafter/release-drafter from 5 to 6 [\#12](https://github.com/buluma/ansible-role-swap/pull/12) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump release-drafter/release-drafter from 5 to 6 [\#11](https://github.com/buluma/ansible-role-swap/pull/11) ([dependabot[bot]](https://github.com/apps/dependabot))
