@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/buluma/ansible-role-swap/tree/HEAD)
+## [24.3.31](https://github.com/buluma/ansible-role-swap/tree/24.3.31) (2024-03-29)
 
-[Full Changelog](https://github.com/buluma/ansible-role-swap/compare/2.1.0...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-swap/compare/2.1.0...24.3.31)
 
 **Merged pull requests:**
 
