@@ -71,6 +71,13 @@ jobs:
           - image: "docker-molecule-images"
             tag: "kalilinux"
     steps:
+
+      - name: Docker Login
+        uses: docker/login-action@v3.2.0
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
       - name: Checkout Role
         uses: actions/checkout@v4
         with:
