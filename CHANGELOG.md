@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-swap/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-swap/compare/24.3.31...HEAD)
+
+**Merged pull requests:**
+
+- Bump docker/login-action from 3.2.0 to 3.3.0 [\#16](https://github.com/buluma/ansible-role-swap/pull/16) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [24.3.31](https://github.com/buluma/ansible-role-swap/tree/24.3.31) (2024-03-29)
 
 [Full Changelog](https://github.com/buluma/ansible-role-swap/compare/2.1.0...24.3.31)
