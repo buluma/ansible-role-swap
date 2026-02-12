@@ -5,4 +5,4 @@
 repository:
   description: Configure swap files on your system.
   homepage: https://buluma.github.io/
-  topics: swap, ansible, molecule, tox, playbook
+  topics: swap, ansible, molecule, playbook
