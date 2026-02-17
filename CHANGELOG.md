@@ -4,6 +4,11 @@
 
 [Full Changelog](https://github.com/buluma/ansible-role-swap/compare/24.3.31...HEAD)
 
+**Closed issues:**
+
+- Update action [\#8](https://github.com/buluma/ansible-role-swap/issues/8)
+- rebuild action [\#7](https://github.com/buluma/ansible-role-swap/issues/7)
+
 **Merged pull requests:**
 
 - Bump ansible/ansible-lint from 24.7.0 to 24.9.0 [\#17](https://github.com/buluma/ansible-role-swap/pull/17) ([dependabot[bot]](https://github.com/apps/dependabot))
