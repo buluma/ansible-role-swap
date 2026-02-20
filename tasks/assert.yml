@@ -1,5 +1,4 @@
 ---
-
 - name: assert | Test if swap_swappiness is set correctly
   ansible.builtin.assert:
     that:

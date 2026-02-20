@@ -77,5 +77,5 @@
     - name: Remove swap from fstab
       ansible.builtin.lineinfile:
         path: /etc/fstab
-        regexp: '^([^#].*?\sswap\s+sw\s+.*)$'
+        regexp: "^([^#].*?\\sswap\\s+sw\\s+.*)$"
         state: absent
