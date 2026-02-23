@@ -1,11 +1,11 @@
 ---
-  - name: Converge
-    hosts: all
-    become: true
-    gather_facts: true
+- name: Converge
+  hosts: all
+  become: true
+  gather_facts: true
 
-    roles:
-      - role: buluma.swap
-        swap_files:
-          - path: /my.swap
-            size: 1024
+  roles:
+  - role: buluma.swap
+    swap_files:
+    - path: /my.swap
+      size: 1024
