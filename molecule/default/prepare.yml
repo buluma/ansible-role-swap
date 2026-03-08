@@ -5,5 +5,5 @@
   become: true
 
   roles:
-  - role: buluma.bootstrap
-  - role: buluma.sysctl
+    - role: buluma.bootstrap
+    - role: buluma.sysctl

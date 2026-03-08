@@ -1,6 +1,6 @@
 ---
 roles:
-- name: buluma.bootstrap
-- name: buluma.sysctl
+  - name: buluma.bootstrap
+  - name: buluma.sysctl
 collections:
-- name: ansible.posix
+  - name: ansible.posix
